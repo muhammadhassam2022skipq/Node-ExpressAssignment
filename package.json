@@ -1,0 +1,19 @@
+{
+  "name": "4100-m-hassam-nodejs-assignment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "Hassam",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  },
+  "dependencies": {
+    "body-parse": "^0.1.0",
+    "express": "^4.18.1"
+  }
+}
