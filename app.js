@@ -1,13 +1,15 @@
 // creating express app and importing required modules
 const express = require("express");
 const app = express();
-const fs = require("fs");
-const path = require("path");
-const bodyParser = require("body-parser");
+const fs = require("fs"); //file system module allows you to work with the file system on your computer.
+const path = require("path"); //Path module provides a way of working with directories and file paths
+const bodyParser = require("body-parser"); //in order to read HTTP POST data , we have to use "body-parser" node module.
 
 //selecting the port
 const port = 3000;
 app.use(bodyParser.urlencoded({ extended: false }));
+
+//giving the path of static files to express
 app.use(express.static(path.join(__dirname, "public")));
 
 
@@ -19,7 +21,6 @@ app.get("/", (req, res) => {
 app.post("/message", (req, res) => {
   const strSalaryValue = req.body.salaray;
   var currentSalary = parseInt(strSalaryValue);
-  console.log(currentSalary);
   fs.writeFileSync("message.txt", strSalaryValue); //sending our from data to text file (optional)
   const stringSalary = fs.readFileSync("message.txt", "utf8"); // reading from text file (optional)
   
