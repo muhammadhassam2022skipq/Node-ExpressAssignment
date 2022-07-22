@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+    </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section id="results">
+
+        <% if (CurrentSalary>0 ) { %>
+            <h1 style="display: block;">The tax on the person with salary Rs <%= CurrentSalary %> is <%= SalaryTax %> Rs
+                        which is <%= SalaryPercentage %> % of the income</h1>
+            <% } else { %>
+                <h1 style="display: none;">The tax on the person with salary Rs <%= CurrentSalary %> is <%= SalaryTax %>
+                            Rs which is <%= SalaryPercentage %> % of the income</h1>
+                <% } %>
+
+    </section>
+    <script src="index.js"></script>
+</body>
+
+</html>
